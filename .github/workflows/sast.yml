@@ -24,7 +24,11 @@ jobs:
           java-version: '25'
           
       - name: Check Java Version
-        run: java -version
+        run: |
+              java -version
+              javac -version
+              echo $JAVA_HOME
+              which java
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
